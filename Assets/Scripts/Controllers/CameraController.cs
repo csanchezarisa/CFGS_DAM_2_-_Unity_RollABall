@@ -7,17 +7,20 @@ public class CameraController : MonoBehaviour
     public float turnSpeed = 4.0f;
     public Transform player;
 
-    private Vector3 offset;
+    private Vector3 offsetX;
+    private Vector3 offsetY;
 
     void Start()
     {
-        offset = new Vector3(player.position.x, player.position.y + 5.0f, player.position.z + 7.0f);
+        offsetX = new Vector3(player.position.x, player.position.y + 5.0f, player.position.z + 7.0f);
+        offsetY = new Vector3(0, 4.0f, 0);
     }
 
     void LateUpdate()
     {
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
-        transform.position = player.position + offset;
+        offsetX = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offsetX;
+        offsetY = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed, Vector3.right) * offsetY;
+        transform.position = player.position + offsetX + offsetY;
         transform.LookAt(player.position);
     }
 
