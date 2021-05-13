@@ -36,17 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        //float hMovement = Input.GetAxis("Horizontal");
-        //float vMovement = Input.GetAxis("Vertical");
-
-        //Vector3 movement = new Vector3(camera.transform.forward.x * hMovement, 0, camera.transform.forward.z * vMovement);
-        //rb.AddForce(movement * speed);
-
-        //if (Input.GetButtonDown("Jump"))
-        //{
-        //    rb.AddForce(Vector3.up * speed, ForceMode.Impulse);
-        //}
-
+        // Movimiento horizontal
         if (Mathf.Abs(Input.GetAxisRaw("Vertical")) + Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.1f)
         {
             Vector3 forward = camera.transform.TransformDirection(Vector3.forward);
@@ -62,6 +52,12 @@ public class PlayerController : MonoBehaviour
             moveDirection.y = 0;
 
             rb.AddForce(moveDirection * speed);
+        }
+
+        // Salto
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.1f)
+        {
+            rb.AddForce(Vector3.up * speed, ForceMode.Impulse);
         }
     }
 
