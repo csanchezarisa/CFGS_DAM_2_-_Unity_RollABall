@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
     public TextMeshProUGUI countText;
+    public GameObject camera;
     public GameObject winTextObject;
 
     private int count;
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         float vMovement = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(hMovment, 0.0f, vMovement);
+        movement = camera.transform.rotation * movement;
         rb.AddForce(movement * speed);
     }
 
