@@ -1204,6 +1204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   countText: {fileID: 333367948}
+  camera: {fileID: 919433363}
   winTextObject: {fileID: 1296386173}
 --- !u!114 &1795057344
 MonoBehaviour:
