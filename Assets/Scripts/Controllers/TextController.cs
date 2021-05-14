@@ -37,15 +37,36 @@ public class TextController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        // Se coje la primera moneda del tutorial para moverse
         if (other.gameObject.CompareTag("GoldCoins") && count == 0)
         {
-            other.gameObject.SetActive(false);
+            // Se elimina el texto y se hace invisible el muro
             Destroy(tutorialMoveText);
             Destroy(tutorialEastWall.GetComponent<MeshRenderer>());
+
+            // Se activa el trigger para el muro
+            BoxCollider wallCollider = tutorialEastWall.GetComponent<BoxCollider>();
+            wallCollider.isTrigger = true;
+
+            // Se muestra el texto para indicar cómo saltar
             tutorialJumpText.SetActive(true);
-            count++;
-            SetCountText();
+        }
+        else if (other.gameObject.CompareTag("JumpWall") && count > 0)
+        {
+            Destroy(tutorialEastWall);
+            Destroy(tutorialJumpText);
         }
         
+        // Se consigue una moneda dorada. 5 puntos
+        if (other.gameObject.CompareTag("GoldCoins"))
+        {
+            // Se oculta la moneda
+            other.gameObject.SetActive(false);
+
+            // Se suma en uno el contador de monedas recogidas
+            count += 5;
+            SetCountText();
+        }
     }
 }
