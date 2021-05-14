@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour
 
     private Vector3 offsetX;
     private Vector3 offsetY;
+    private Transform currentTransparentWall;
 
     void Start()
     {
@@ -22,6 +23,39 @@ public class CameraController : MonoBehaviour
         offsetY = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * turnSpeed, Vector3.right) * offsetY;
         transform.position = player.position + offsetX + offsetY;
         transform.LookAt(player.position);
+        CheckView();
     }
 
+    void CheckView()
+    {
+        Debug.DrawRay(transform.position, player.position - transform.position, Color.red, 0.0f);
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, player.position - transform.position, out hit, Vector3.Distance(player.position, transform.position), LayerMask.GetMask("Wall")))
+        {
+
+            Transform transparentWall = hit.transform;
+            Color transparentWallColor = transparentWall.gameObject.GetComponent<MeshRenderer>().material.color;
+
+            if (currentTransparentWall && currentTransparentWall != transparentWall)
+            {
+                transparentWallColor.a = 1.0f;
+                currentTransparentWall.gameObject.GetComponent<MeshRenderer>().material.color = transparentWallColor;
+            }
+
+            transparentWallColor.a = 0.3f;
+            transparentWall.gameObject.GetComponent<MeshRenderer>().material.color = transparentWallColor;
+            currentTransparentWall = transparentWall;
+
+        }
+        else
+        {
+            if (currentTransparentWall)
+            {
+                Color myColor = currentTransparentWall.gameObject.GetComponent<MeshRenderer>().material.color;
+                myColor.a = 1.0f;
+                currentTransparentWall.gameObject.GetComponent<MeshRenderer>().material.color = myColor;
+            }
+        }
+    }
 }

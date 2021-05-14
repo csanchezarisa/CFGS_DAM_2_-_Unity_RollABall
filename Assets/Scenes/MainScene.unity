@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 208851828}
   - component: {fileID: 208851827}
   - component: {fileID: 208851826}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NorthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 337358859}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WallsTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 652951081}
   - component: {fileID: 652951080}
   - component: {fileID: 652951079}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EastWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1617,7 @@ GameObject:
   - component: {fileID: 1489958765}
   - component: {fileID: 1489958764}
   - component: {fileID: 1489958763}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EastWallDestroyable
   m_TagString: JumpWall
   m_Icon: {fileID: 0}
@@ -1946,7 +1946,7 @@ GameObject:
   - component: {fileID: 1967103886}
   - component: {fileID: 1967103885}
   - component: {fileID: 1967103884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SouthWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2041,7 +2041,7 @@ GameObject:
   - component: {fileID: 2096725368}
   - component: {fileID: 2096725367}
   - component: {fileID: 2096725366}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WestWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
