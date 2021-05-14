@@ -7,32 +7,16 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed;
-    public TextMeshProUGUI countText;
     public GameObject camera;
-    public GameObject winTextObject;
 
-    private int count;
     private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 0;
-
-        SetCountText();
-        winTextObject.SetActive(false);
     }
 
-    void SetCountText()
-    {
-        countText.text = "Count: " + count.ToString();
-
-        if (count >= 1)
-        {
-            winTextObject.SetActive(true);
-        }
-    }
 
     void Update()
     {
@@ -55,19 +39,9 @@ public class PlayerController : MonoBehaviour
         }
 
         // Salto
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.1f)
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.01f)
         {
             rb.AddForce(Vector3.up * speed, ForceMode.Impulse);
-        }
-    }
-
-        private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("GoldCoins"))
-        {
-            other.gameObject.SetActive(false);
-            count++;
-            SetCountText();
         }
     }
 }
