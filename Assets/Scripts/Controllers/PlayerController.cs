@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
             moveDirection = this.transform.rotation * moveDirection;
             moveDirection.y = 0;
 
-            rb.AddForce(moveDirection * speed);
+            rb.AddForce(moveDirection * speed, ForceMode.Force);
         }
 
         // Salto
