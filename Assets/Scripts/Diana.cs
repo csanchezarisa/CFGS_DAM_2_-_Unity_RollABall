@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Diana : MonoBehaviour
 {
+
+    public GameObject platform;
+
+    private void Start()
+    {
+        platform.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Bullet"))
-        {
-            print("hola");
-        }
+            platform.SetActive(true);
     }
 }
