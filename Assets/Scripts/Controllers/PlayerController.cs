@@ -40,8 +40,12 @@ public class PlayerController : MonoBehaviour
 
         // Salto
         if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.01f)
-        {
-            rb.AddForce(Vector3.up * speed, ForceMode.Impulse);
-        }
+            Jump();
+    }
+
+    /** Aplica una fuerza vertical positiva al personaje */
+    void Jump()
+    {
+        rb.AddForce(Vector3.up * speed, ForceMode.Impulse);
     }
 }
