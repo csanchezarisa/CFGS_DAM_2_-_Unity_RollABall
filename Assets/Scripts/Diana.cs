@@ -15,6 +15,9 @@ public class Diana : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Bullet"))
+        {
             platform.SetActive(true);
+            Destroy(GetComponent<MeshRenderer>());
+        }
     }
 }
