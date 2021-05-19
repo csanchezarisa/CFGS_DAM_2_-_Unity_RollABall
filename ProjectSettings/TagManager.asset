@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GoldCoins
   - JumpWall
+  - Bullet
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class TextController : MonoBehaviour
     public GameObject tutorialMoveText;
     public GameObject tutorialEastWall;
     public GameObject tutorialJumpText;
+    public GameObject tutorialShootText;
 
     private int count;
 
@@ -23,6 +24,7 @@ public class TextController : MonoBehaviour
         winText.SetActive(false);
         tutorialMoveText.SetActive(true);
         tutorialJumpText.SetActive(false);
+        tutorialShootText.SetActive(false);
     }
 
     void SetCountText()
@@ -56,6 +58,8 @@ public class TextController : MonoBehaviour
         {
             Destroy(tutorialEastWall);
             Destroy(tutorialJumpText);
+            tutorialShootText.SetActive(true);
+            Destroy(tutorialShootText, 5);
         }
         
         // Se consigue una moneda dorada. 5 puntos
