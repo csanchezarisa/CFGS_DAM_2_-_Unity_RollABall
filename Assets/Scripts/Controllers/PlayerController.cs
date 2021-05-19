@@ -6,7 +6,8 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
 
-    public float speed;
+    public float speed = 5;
+    public float jumpForce = 10;
     public GameObject camera;
 
     private Rigidbody rb;
@@ -46,6 +47,6 @@ public class PlayerController : MonoBehaviour
     /** Aplica una fuerza vertical positiva al personaje */
     void Jump()
     {
-        rb.AddForce(Vector3.up * speed, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 }

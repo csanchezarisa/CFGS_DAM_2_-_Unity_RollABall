@@ -9,13 +9,11 @@ public class LightPlayerController : MonoBehaviour
 
     private Vector3 offset;
 
-    // Start is called before the first frame update
     void Start()
     {
-        offset = new Vector3(player.position.x, player.position.y + 10.0f, player.position.z);
+        offset = new Vector3(0, player.position.y + 5.0f, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = player.position + offset;
