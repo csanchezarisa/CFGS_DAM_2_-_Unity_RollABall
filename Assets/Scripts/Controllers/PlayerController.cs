@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5;
     public float jumpForce = 10;
     public GameObject camera;
+    public Transform desertRespawn;
 
     private Rigidbody rb;
 
@@ -48,5 +49,13 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("DesertEnemy"))
+        {
+            transform.position = desertRespawn.position;
+        }
     }
 }
