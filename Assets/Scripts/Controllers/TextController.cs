@@ -12,6 +12,7 @@ public class TextController : MonoBehaviour
     public GameObject tutorialEastWall;
     public GameObject tutorialJumpText;
     public GameObject tutorialShootText;
+    public GameObject desertPlatform;
 
     private int count;
 
@@ -61,7 +62,7 @@ public class TextController : MonoBehaviour
             tutorialShootText.SetActive(true);
             Destroy(tutorialShootText, 5);
         }
-        
+
         // Se consigue una moneda dorada. 5 puntos
         if (other.gameObject.CompareTag("GoldCoins"))
         {
@@ -71,6 +72,18 @@ public class TextController : MonoBehaviour
             // Se suma en uno el contador de monedas recogidas
             count += 5;
             SetCountText();
+        }
+
+        CheckCountTriggers();
+    }
+
+    /** Ejecuta ciertas acciones cuando se llega a obtener un número determinado de puntos */
+    void CheckCountTriggers()
+    {
+        // Se han conseguido todas las monedas del desierto
+        if (count >= 30)
+        {
+            desertPlatform.SetActive(true);
         }
     }
 }
