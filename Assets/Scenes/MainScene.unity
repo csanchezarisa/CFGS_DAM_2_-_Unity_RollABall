@@ -6241,6 +6241,7 @@ MonoBehaviour:
   jumpForce: 10
   camera: {fileID: 919433363}
   desertRespawn: {fileID: 1695968486}
+  riverRespawn: {fileID: 728168749}
 --- !u!114 &1795057344
 MonoBehaviour:
   m_ObjectHideFlags: 0
