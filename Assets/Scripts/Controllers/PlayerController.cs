@@ -54,6 +54,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        print(other.gameObject.tag);
+
         // Toca un cactus (enemigo del desierto) y vuelve al respawn del desierto
         if (other.gameObject.CompareTag("DesertEnemy"))
         {
@@ -63,6 +66,7 @@ public class PlayerController : MonoBehaviour
         // Toca el rio y vuelve al respawn del rio
         else if (other.gameObject.CompareTag("River"))
         {
+            print("Ha tocado rio");
             transform.position = riverRespawn.position;
         }
     }

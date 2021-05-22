@@ -5,11 +5,11 @@ using UnityEngine;
 public class BoatController : MonoBehaviour
 {
 
-    public Rigidbody boat;
     public Transform[] platformPositions;
     public float platformSpeed;
     public float waitTime;
 
+    private Rigidbody boat;
     private int nextPosition = 1;
     private bool moveToNext = false;
 
