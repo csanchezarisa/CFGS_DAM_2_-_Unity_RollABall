@@ -42,7 +42,10 @@ public class BoatController : MonoBehaviour
             nextPosition++;
 
             if (nextPosition > platformPositions.Length - 1)
-                Destroy(gameObject, 5);
+            {
+                Destroy(gameObject, 10);
+                Destroy(this, 10);
+            }
         }
     }
 

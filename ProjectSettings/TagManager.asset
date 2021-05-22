@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - DesertEnemy
   - River
+  - CanonBall
   layers:
   - Default
   - TransparentFX
