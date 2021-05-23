@@ -33,8 +33,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7633106237757912314, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      propertyPath: Loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7633106237757912314, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: MinDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7633106237757912314, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7633106237757912314, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1950871307682000, guid: 01348926c7cbb3347a006c37204131c3, type: 3}
       propertyPath: m_Name
