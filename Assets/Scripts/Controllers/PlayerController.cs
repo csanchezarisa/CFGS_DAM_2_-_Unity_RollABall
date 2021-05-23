@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Transform tutorialRespawn;
     public Transform desertRespawn;
     public Transform riverRespawn;
+    public Transform jungleRespawn;
 
     private Rigidbody rb;
 
@@ -63,6 +64,12 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("River") || other.gameObject.CompareTag("CanonBall"))
         {
             transform.position = riverRespawn.position;
+        }
+
+        // Al tocar el lago o los bordes de la jungla. Vuelve al respawn de la jungla
+        else if (other.gameObject.CompareTag("Lake"))
+        {
+            transform.position = jungleRespawn.position;
         }
     }
 }

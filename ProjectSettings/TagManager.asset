@@ -12,6 +12,8 @@ TagManager:
   - CanonBall
   - DesertBorder
   - TutorialBorder
+  - Lake
+  - JungleBorder
   layers:
   - Default
   - TransparentFX
