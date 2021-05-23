@@ -60,8 +60,8 @@ public class PlayerController : MonoBehaviour
             transform.position = desertRespawn.position;
         }
 
-        // Toca el rio y vuelve al respawn del rio
-        else if (other.gameObject.CompareTag("River"))
+        // Toca el rio o una bala de cañon y vuelve al respawn del rio
+        else if (other.gameObject.CompareTag("River") || other.gameObject.CompareTag("CanonBall"))
         {
             transform.position = riverRespawn.position;
         }
