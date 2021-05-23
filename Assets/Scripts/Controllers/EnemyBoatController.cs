@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class EnemyBoatController : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class EnemyBoatController : MonoBehaviour
     public bool right;
 
     private bool waitToShoot = false;
+    private AudioSource audioShoot;
+
+    private void Start()
+    {
+        audioShoot = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -35,6 +42,8 @@ public class EnemyBoatController : MonoBehaviour
         else
             direction = -transform.right;
 
+        audioShoot.Play();
+
         canonRb.AddForce(direction * canonSpeed, ForceMode.Impulse);
 
         Destroy(canonBall, 3);
@@ -44,9 +53,7 @@ public class EnemyBoatController : MonoBehaviour
     IEnumerator WaitToShoot(float time)
     {
         this.waitToShoot = true;
-        print("Esperando " + time);
         yield return new WaitForSeconds(time);
-        print("disparando");
         Shoot();
         this.waitToShoot = false;
     }
