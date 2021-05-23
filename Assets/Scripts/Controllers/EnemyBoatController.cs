@@ -24,7 +24,6 @@ public class EnemyBoatController : MonoBehaviour
         if (!waitToShoot)
         {
             float time = Random.Range(0, 5);
-            print("numero random " + time);
             StartCoroutine(WaitToShoot(time));
         }
     }

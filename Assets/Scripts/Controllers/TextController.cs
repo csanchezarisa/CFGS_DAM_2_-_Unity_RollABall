@@ -16,10 +16,15 @@ public class TextController : MonoBehaviour
     public GameObject riverPlatforms;
 
     private int count;
+    private AudioSource audioNewZone;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        audioNewZone = audioSources[1];
+
         count = 0;
         SetCountText();
 
@@ -45,6 +50,9 @@ public class TextController : MonoBehaviour
         // Se coje la primera moneda del tutorial para moverse
         if (other.gameObject.CompareTag("GoldCoins") && count == 0)
         {
+            // Se reproduce el audio de nueva zona
+            audioNewZone.Play();
+
             // Se elimina el texto y se hace invisible el muro
             Destroy(tutorialMoveText);
             Destroy(tutorialEastWall.GetComponent<MeshRenderer>());
@@ -56,6 +64,8 @@ public class TextController : MonoBehaviour
             // Se muestra el texto para indicar cómo saltar
             tutorialJumpText.SetActive(true);
         }
+
+        // Se salta el muro
         else if (other.gameObject.CompareTag("JumpWall") && count > 0)
         {
             Destroy(tutorialEastWall);
@@ -67,6 +77,10 @@ public class TextController : MonoBehaviour
         // Se consigue una moneda dorada. 5 puntos
         if (other.gameObject.CompareTag("GoldCoins"))
         {
+            // Reproduce el sonido de la moneda
+            AudioSource audioCoin = other.GetComponent<AudioSource>();
+            audioCoin.Play();
+
             // Se oculta la moneda
             other.gameObject.SetActive(false);
 
@@ -84,12 +98,14 @@ public class TextController : MonoBehaviour
         // Se han conseguido todas las monedas del desierto
         if (count >= 30)
         {
+            audioNewZone.Play();
             desertPlatform.SetActive(true);
         }
 
         // Se han conseguido todas las monedas del rio
         if (count >= 55)
         {
+            audioNewZone.Play();
             riverPlatforms.SetActive(true);
         }
     }

@@ -15,11 +15,15 @@ public class PlayerController : MonoBehaviour
     public Transform jungleRespawn;
 
     private Rigidbody rb;
+    private AudioSource audioJump;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        audioJump = audioSources[0];
     }
 
 
@@ -43,9 +47,9 @@ public class PlayerController : MonoBehaviour
     /** Aplica una fuerza vertical positiva al personaje */
     void Jump()
     {
+        audioJump.Play();
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
-
     private void OnTriggerEnter(Collider other)
     {
         // Se cae y toca el borde del tutorial. Vuelve al respawn del tutorial
