@@ -8,6 +8,7 @@ public class BulletController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("DesertEnemy"))
         {
+            other.gameObject.GetComponent<AudioSource>().Play();
             Destroy(other.gameObject);
         }
     }
