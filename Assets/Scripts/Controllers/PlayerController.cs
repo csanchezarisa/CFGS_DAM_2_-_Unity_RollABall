@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5;
     public float jumpForce = 10;
     public Transform playerShooter;
+    public Transform tutorialRespawn;
     public Transform desertRespawn;
     public Transform riverRespawn;
 
@@ -46,13 +47,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Toca un cactus (enemigo del desierto) y vuelve al respawn del desierto
-        if (other.gameObject.CompareTag("DesertEnemy"))
+        // Se cae y toca el borde del tutorial. Vuelve al respawn del tutorial
+        if (other.gameObject.CompareTag("TutorialBorder"))
+        {
+            transform.position = tutorialRespawn.position;
+        }
+
+        // Toca un cactus (enemigo del desierto) o se cae y toca el borde del Desierto. Vuelve al respawn del desierto
+        else if (other.gameObject.CompareTag("DesertEnemy") || other.gameObject.CompareTag("DesertBorder"))
         {
             transform.position = desertRespawn.position;
         }
 
-        // Toca el rio o una bala de cañon y vuelve al respawn del rio
+        // Toca el rio o una bala de cañon o se cae y toca el borde del Rio. Vuelve al respawn del rio
         else if (other.gameObject.CompareTag("River") || other.gameObject.CompareTag("CanonBall"))
         {
             transform.position = riverRespawn.position;

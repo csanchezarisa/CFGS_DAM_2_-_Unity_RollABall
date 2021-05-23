@@ -10,6 +10,8 @@ TagManager:
   - DesertEnemy
   - River
   - CanonBall
+  - DesertBorder
+  - TutorialBorder
   layers:
   - Default
   - TransparentFX
