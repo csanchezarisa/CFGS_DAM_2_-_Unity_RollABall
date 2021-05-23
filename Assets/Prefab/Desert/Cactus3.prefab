@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 419098}
   - component: {fileID: 3357800}
   - component: {fileID: 2324206}
-  - component: {fileID: 3515055529160483138}
+  - component: {fileID: 2561089999130194866}
   m_Layer: 0
   m_Name: cactus3
   m_TagString: DesertEnemy
@@ -115,8 +115,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3515055529160483138
-BoxCollider:
+--- !u!64 &2561089999130194866
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,9 +125,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.5626833, y: 1.1720929, z: 1.5525105}
-  m_Center: {x: 0, y: 0.58834016, z: 0.0000002682209}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 1aec1266c0ec1804c8c87f521a7cfc61, type: 3}
 --- !u!1 &197264
 GameObject:
   m_ObjectHideFlags: 0
