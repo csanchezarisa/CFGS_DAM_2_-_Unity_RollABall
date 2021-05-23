@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private AudioSource audioJump;
+    private AudioSource audioHurt;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
         AudioSource[] audioSources = GetComponents<AudioSource>();
         audioJump = audioSources[0];
+        audioHurt = audioSources[2];
     }
 
 
@@ -55,24 +57,28 @@ public class PlayerController : MonoBehaviour
         // Se cae y toca el borde del tutorial. Vuelve al respawn del tutorial
         if (other.gameObject.CompareTag("TutorialBorder"))
         {
+            audioHurt.Play();
             transform.position = tutorialRespawn.position;
         }
 
         // Toca un cactus (enemigo del desierto) o se cae y toca el borde del Desierto. Vuelve al respawn del desierto
         else if (other.gameObject.CompareTag("DesertEnemy") || other.gameObject.CompareTag("DesertBorder"))
         {
+            audioHurt.Play();
             transform.position = desertRespawn.position;
         }
 
         // Toca el rio o una bala de cañon o se cae y toca el borde del Rio. Vuelve al respawn del rio
         else if (other.gameObject.CompareTag("River") || other.gameObject.CompareTag("CanonBall"))
         {
+            audioHurt.Play();
             transform.position = riverRespawn.position;
         }
 
         // Al tocar el lago o los bordes de la jungla. Vuelve al respawn de la jungla
         else if (other.gameObject.CompareTag("Lake") || other.gameObject.CompareTag("JungleBorder"))
         {
+            audioHurt.Play();
             transform.position = jungleRespawn.position;
         }
     }
