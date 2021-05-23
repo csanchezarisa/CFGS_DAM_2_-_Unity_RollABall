@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour
                 currentTransparentWall.gameObject.GetComponent<MeshRenderer>().material.color = transparentWallColor;
             }
 
-            transparentWallColor.a = 0.3f;
+            transparentWallColor.a = 0.2f;
             transparentWall.gameObject.GetComponent<MeshRenderer>().material.color = transparentWallColor;
             currentTransparentWall = transparentWall;
 
