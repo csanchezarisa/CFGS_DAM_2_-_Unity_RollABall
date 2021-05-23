@@ -13,6 +13,7 @@ public class TextController : MonoBehaviour
     public GameObject tutorialJumpText;
     public GameObject tutorialShootText;
     public GameObject desertPlatform;
+    public GameObject riverPlatforms;
 
     private int count;
 
@@ -84,6 +85,12 @@ public class TextController : MonoBehaviour
         if (count >= 30)
         {
             desertPlatform.SetActive(true);
+        }
+
+        // Se han conseguido todas las monedas del rio
+        if (count >= 55)
+        {
+            riverPlatforms.SetActive(true);
         }
     }
 }
