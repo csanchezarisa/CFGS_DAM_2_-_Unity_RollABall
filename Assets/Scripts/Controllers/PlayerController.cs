@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private AudioSource audioJump;
     private AudioSource audioHurt;
+    private AudioSource audioRolling;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         AudioSource[] audioSources = GetComponents<AudioSource>();
         audioJump = audioSources[0];
         audioHurt = audioSources[2];
+        audioRolling = audioSources[3];
     }
 
 
@@ -39,6 +41,13 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDirection = (h * playerShooter.right + v * -playerShooter.forward);
 
             rb.AddForce(moveDirection * speed, ForceMode.Force);
+
+            if (!audioRolling.isPlaying)
+                audioRolling.Play();
+        }
+        else if (audioRolling.isPlaying)
+        {
+            audioRolling.Stop();
         }
 
         // Salto
