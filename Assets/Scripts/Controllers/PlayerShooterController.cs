@@ -10,9 +10,12 @@ public class PlayerShooterController : MonoBehaviour
     public float bulletSpeed;
     public GameObject bulletPrefav;
 
+    private AudioSource audioShoot;
+
     void Start()
     {
         transform.position = player.position;
+        audioShoot = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -35,6 +38,8 @@ public class PlayerShooterController : MonoBehaviour
         Vector3 bulletPosition = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         GameObject bullet = Instantiate(bulletPrefav, bulletPosition, transform.rotation) as GameObject;
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+
+        audioShoot.Play();
 
         bulletRb.AddForce(-transform.forward * bulletSpeed, ForceMode.Impulse);
 
