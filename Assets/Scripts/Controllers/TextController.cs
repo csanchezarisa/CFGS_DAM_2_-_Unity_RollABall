@@ -66,7 +66,7 @@ public class TextController : MonoBehaviour
         }
 
         // Se salta el muro
-        else if (other.gameObject.CompareTag("JumpWall") && count > 0)
+        else if (other.gameObject.CompareTag("JumpWall") && count == 1)
         {
             Destroy(tutorialEastWall);
             Destroy(tutorialJumpText);
@@ -82,7 +82,7 @@ public class TextController : MonoBehaviour
             audioCoin.Play();
 
             // Se oculta la moneda
-            other.gameObject.SetActive(false);
+            Destroy(other.gameObject, 1);
 
             // Se suma en uno el contador de monedas recogidas
             count += 5;
@@ -96,14 +96,14 @@ public class TextController : MonoBehaviour
     void CheckCountTriggers()
     {
         // Se han conseguido todas las monedas del desierto
-        if (count >= 30)
+        if (count == 30)
         {
             audioNewZone.Play();
             desertPlatform.SetActive(true);
         }
 
         // Se han conseguido todas las monedas del rio
-        if (count >= 55)
+        if (count == 55)
         {
             audioNewZone.Play();
             riverPlatforms.SetActive(true);
