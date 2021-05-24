@@ -12,6 +12,7 @@ public class BoatController : MonoBehaviour
     private Rigidbody boat;
     private int nextPosition = 1;
     private bool moveToNext = false;
+    private bool moving = true;
 
     private void Start()
     {
@@ -36,12 +37,14 @@ public class BoatController : MonoBehaviour
             StartCoroutine(WaitforMove(waitTime));
         }
 
-        if (Vector3.Distance(boat.position, platformPositions[nextPosition].position) <= 0)
+        if (moving && Vector3.Distance(boat.position, platformPositions[nextPosition].position) <= 0)
         {
-            StartCoroutine(WaitforMove(waitTime));
-            nextPosition++;
 
-            if (nextPosition > platformPositions.Length - 1)
+            moving = false;
+
+            StartCoroutine(WaitforMove(waitTime));
+
+            if (nextPosition >= platformPositions.Length - 1)
             {
                 Destroy(gameObject, 10);
                 Destroy(this, 10);
