@@ -66,7 +66,7 @@ public class TextController : MonoBehaviour
         }
 
         // Se salta el muro
-        else if (other.gameObject.CompareTag("JumpWall") && count == 1)
+        else if (other.gameObject.CompareTag("JumpWall") && count > 0)
         {
             Destroy(tutorialEastWall);
             Destroy(tutorialJumpText);
