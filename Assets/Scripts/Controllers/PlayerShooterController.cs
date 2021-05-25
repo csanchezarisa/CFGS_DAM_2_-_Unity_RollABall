@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShooterController : MonoBehaviour
 {
 
-    public Transform camera;
+    public Transform cameraPosition;
     public Transform player;
     public float bulletSpeed;
     public GameObject bulletPrefav;
@@ -20,12 +20,12 @@ public class PlayerShooterController : MonoBehaviour
 
     private void Update()
     {
-        Quaternion cameraRotation = camera.rotation;
-        cameraRotation.y = 0;
-        cameraRotation.w = 0;
+        Quaternion cameraPositionRotation = cameraPosition.rotation;
+        cameraPositionRotation.y = 0;
+        cameraPositionRotation.w = 0;
 
         transform.position = player.position;
-        transform.rotation = cameraRotation;
+        transform.rotation = cameraPositionRotation;
 
         // Dispara
         if (Input.GetButtonDown("Fire1"))
