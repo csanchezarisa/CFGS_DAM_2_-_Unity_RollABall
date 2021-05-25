@@ -110,6 +110,7 @@ public class TextController : MonoBehaviour
             riverPlatforms.SetActive(true);
         }
 
+        // Se activa la zona del pasillo
         if (count == 95)
         {
             audioNewZone.Play();
