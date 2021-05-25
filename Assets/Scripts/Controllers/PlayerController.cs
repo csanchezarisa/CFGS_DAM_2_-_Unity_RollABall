@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Al tocar el lago o los bordes de la jungla. Vuelve al respawn de la jungla
-        else if (other.gameObject.CompareTag("Lake") || other.gameObject.CompareTag("JungleBorder") || other.gameObject.CompareTag("Bullet"))
+        else if (other.gameObject.CompareTag("Lake") || other.gameObject.CompareTag("JungleBorder") || other.gameObject.CompareTag("EnemyBullet"))
         {
             audioHurt.Play();
             transform.position = jungleRespawn.position;

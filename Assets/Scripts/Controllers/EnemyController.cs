@@ -8,13 +8,17 @@ public class EnemyController : MonoBehaviour
     public Transform player;
     public GameObject bulletPrefab;
     public float bulletSpeed = 100;
+    public int lives = 3;
 
     private AudioSource audioShoot;
+    private AudioSource audioDie;
     private bool waitToShoot = false;
 
     void Start()
     {
-        audioShoot = GetComponent<AudioSource>();
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        audioShoot = audioSources[0];
+        audioDie = audioSources[1];
     }
 
     void LateUpdate()
@@ -27,6 +31,35 @@ public class EnemyController : MonoBehaviour
             StartCoroutine(WaitToShoot(time));
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        print("Trigger");
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            print("hit");
+            hit();
+        }
+    }
+
+    public void hit()
+    {
+        lives--;
+
+        print(lives);
+
+        if (lives <= 0)
+        {
+
+            print("Diying");
+
+            audioDie.Play();
+
+            Destroy(GetComponent<MeshRenderer>());
+            Destroy(GetComponent<BoxCollider>());
+            Destroy(gameObject, 1);
+        }
     }
 
     private void Shoot()
