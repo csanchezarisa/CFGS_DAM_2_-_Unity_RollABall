@@ -35,10 +35,8 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Trigger");
         if (other.gameObject.CompareTag("Bullet"))
         {
-            print("hit");
             hit();
         }
     }
@@ -52,14 +50,20 @@ public class EnemyController : MonoBehaviour
         if (lives <= 0)
         {
 
-            print("Diying");
-
             audioDie.Play();
+            notifyTextController();
 
             Destroy(GetComponent<MeshRenderer>());
             Destroy(GetComponent<BoxCollider>());
             Destroy(gameObject, 1);
         }
+    }
+
+    void notifyTextController()
+    {
+        GameObject player = GameObject.Find("PlayerSphere");
+        TextController textController = player.GetComponent<TextController>();
+        textController.enemyHit();
     }
 
     private void Shoot()

@@ -173,7 +173,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 309869530}
   - {fileID: 2122666146}
-  platformSpeed: 3
+  platformSpeed: 25
   waitTime: 3
 --- !u!1001 &2661211
 PrefabInstance:
@@ -4225,7 +4225,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 516551210}
   - {fileID: 1935831590}
-  platformSpeed: 5
+  platformSpeed: 25
   waitTime: 3
 --- !u!4 &590009751 stripped
 Transform:
@@ -4654,7 +4654,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 230596265}
   - {fileID: 1654353891}
-  platformSpeed: 7
+  platformSpeed: 10
   waitTime: 3
 --- !u!1 &652951077
 GameObject:
@@ -6046,7 +6046,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 945527612}
   - {fileID: 52880402}
-  platformSpeed: 15
+  platformSpeed: 20
   waitTime: 5
 --- !u!54 &848130753
 Rigidbody:
@@ -7037,7 +7037,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1664421557}
   - {fileID: 1237288113}
-  platformSpeed: 7
+  platformSpeed: 20
   waitTime: 3
 --- !u!1 &935325182
 GameObject:
@@ -9937,7 +9937,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 255374474}
   - {fileID: 1984878745}
-  platformSpeed: 5
+  platformSpeed: 20
   waitTime: 3
 --- !u!1 &1309705188
 GameObject:
@@ -11722,7 +11722,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1807659715}
   - {fileID: 1688187130}
-  platformSpeed: 5
+  platformSpeed: 15
   waitTime: 3
 --- !u!1001 &1532585503
 PrefabInstance:
@@ -11836,7 +11836,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1087625981}
   - {fileID: 1579304982}
-  platformSpeed: 6
+  platformSpeed: 10
   waitTime: 3
 --- !u!1 &1563212001
 GameObject:
@@ -11853,7 +11853,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1563212002
 Transform:
   m_ObjectHideFlags: 0
@@ -12082,7 +12082,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 501384435}
   - {fileID: 63623354}
-  platformSpeed: 7
+  platformSpeed: 15
   waitTime: 3
 --- !u!1001 &1629908053
 PrefabInstance:
@@ -12643,7 +12643,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1144420766}
   - {fileID: 952581336}
-  platformSpeed: 7
+  platformSpeed: 15
   waitTime: 3
 --- !u!1 &1695968485
 GameObject:
@@ -15437,7 +15437,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1613616621}
   - {fileID: 428216090}
-  platformSpeed: 10
+  platformSpeed: 15
   waitTime: 3
 --- !u!1 &1935831589
 GameObject:
@@ -16755,8 +16755,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050063969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -441.6, y: -18.2, z: -2.1737838}
-  m_LocalScale: {x: 15.022823, y: 15.022823, z: 15.022823}
+  m_LocalPosition: {x: -480.5, y: -18.2, z: -2.1737838}
+  m_LocalScale: {x: 28.657433, y: 15.022823, z: 15.022823}
   m_Children: []
   m_Father: {fileID: 1764606935}
   m_RootOrder: 3

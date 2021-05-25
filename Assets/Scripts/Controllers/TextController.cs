@@ -94,6 +94,15 @@ public class TextController : MonoBehaviour
         }
     }
 
+    /** Se mata a un enemigo, se suman 10 puntos */
+    public void enemyHit()
+    {
+        count += 10;
+        SetCountText();
+
+        CheckCountTriggers();
+    }
+
     /** Ejecuta ciertas acciones cuando se llega a obtener un número determinado de puntos */
     void CheckCountTriggers()
     {
