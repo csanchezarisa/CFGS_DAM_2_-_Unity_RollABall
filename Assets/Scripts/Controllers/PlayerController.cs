@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource audioJump;
     private AudioSource audioHurt;
     private AudioSource audioRolling;
+    private bool isGrounded = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,21 @@ public class PlayerController : MonoBehaviour
         audioRolling = audioSources[3];
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (LayerMask.LayerToName(collision.gameObject.layer).Equals("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (LayerMask.LayerToName(collision.gameObject.layer).Equals("Ground"))
+        {
+            isGrounded = false;
+        }
+    }
 
     void Update()
     {
@@ -51,7 +67,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Salto
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.1f)
+        if (Input.GetButtonDown("Jump") && isGrounded)
             Jump();
     }
 

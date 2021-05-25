@@ -15,6 +15,7 @@ TagManager:
   - Lake
   - JungleBorder
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Water
   - UI
   - DesertEnemy
-  - 
+  - Ground
   - 
   - 
   - 
