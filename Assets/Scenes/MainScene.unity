@@ -11664,7 +11664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1563212002
 Transform:
   m_ObjectHideFlags: 0
@@ -13537,6 +13537,7 @@ MonoBehaviour:
   tutorialShootText: {fileID: 366992413}
   desertPlatform: {fileID: 1689468827}
   riverPlatforms: {fileID: 2126429464}
+  hallZone: {fileID: 1563212001}
 --- !u!82 &1795057345
 AudioSource:
   m_ObjectHideFlags: 0

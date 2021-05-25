@@ -14,6 +14,7 @@ public class TextController : MonoBehaviour
     public GameObject tutorialShootText;
     public GameObject desertPlatform;
     public GameObject riverPlatforms;
+    public GameObject hallZone;
 
     private int count;
     private AudioSource audioNewZone;
@@ -87,9 +88,9 @@ public class TextController : MonoBehaviour
             // Se suma en uno el contador de monedas recogidas
             count += 5;
             SetCountText();
-        }
 
-        CheckCountTriggers();
+            CheckCountTriggers();
+        }
     }
 
     /** Ejecuta ciertas acciones cuando se llega a obtener un número determinado de puntos */
@@ -107,6 +108,12 @@ public class TextController : MonoBehaviour
         {
             audioNewZone.Play();
             riverPlatforms.SetActive(true);
+        }
+
+        if (count == 95)
+        {
+            audioNewZone.Play();
+            hallZone.SetActive(true);
         }
     }
 }
