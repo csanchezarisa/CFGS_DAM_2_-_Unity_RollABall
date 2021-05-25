@@ -83,6 +83,7 @@ public class TextController : MonoBehaviour
             audioCoin.Play();
 
             // Se oculta la moneda
+            Destroy(other.gameObject.GetComponent<MeshRenderer>());
             Destroy(other.gameObject, 1);
 
             // Se suma en uno el contador de monedas recogidas
