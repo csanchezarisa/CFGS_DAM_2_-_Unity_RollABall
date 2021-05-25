@@ -634,6 +634,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065856189879646533, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
 --- !u!1001 &51282793
@@ -1290,6 +1294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2943599592864087303, guid: 3aec22b5d3f3c2947bb81040b56e5f96, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aec22b5d3f3c2947bb81040b56e5f96, type: 3}
 --- !u!1001 &132779999
@@ -1683,6 +1691,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2943599592864087303, guid: 3aec22b5d3f3c2947bb81040b56e5f96, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aec22b5d3f3c2947bb81040b56e5f96, type: 3}
 --- !u!1001 &186793812
@@ -1752,6 +1764,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065856189879646533, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
 --- !u!1001 &196335292
@@ -1821,6 +1837,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065856189879646533, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
 --- !u!1001 &201870588
@@ -3182,6 +3202,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2943599592864087303, guid: 3aec22b5d3f3c2947bb81040b56e5f96, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aec22b5d3f3c2947bb81040b56e5f96, type: 3}
 --- !u!1001 &399882857
@@ -10506,6 +10530,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065856189879646533, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
 --- !u!1001 &1387553177
@@ -11275,6 +11303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8065856189879646533, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
 --- !u!1001 &1509126038
@@ -12889,6 +12921,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2943599592864087303, guid: 3aec22b5d3f3c2947bb81040b56e5f96, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1795057342}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3aec22b5d3f3c2947bb81040b56e5f96, type: 3}
 --- !u!1 &1764606934
