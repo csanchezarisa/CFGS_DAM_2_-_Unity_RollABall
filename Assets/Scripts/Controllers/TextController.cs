@@ -15,6 +15,7 @@ public class TextController : MonoBehaviour
     public GameObject desertPlatform;
     public GameObject riverPlatforms;
     public GameObject hallZone;
+    public GameObject rampZone;
 
     private int count;
     private AudioSource audioNewZone;
@@ -125,6 +126,12 @@ public class TextController : MonoBehaviour
         {
             audioNewZone.Play();
             hallZone.SetActive(true);
+        }
+
+        // Se han eliminado todos los monstruos
+        if (count == 185)
+        {
+
         }
     }
 }
