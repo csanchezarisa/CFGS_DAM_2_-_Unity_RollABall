@@ -45,8 +45,6 @@ public class EnemyController : MonoBehaviour
     {
         lives--;
 
-        print(lives);
-
         if (lives <= 0)
         {
 
