@@ -16,6 +16,7 @@ TagManager:
   - JungleBorder
   - Enemy
   - Ground
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
