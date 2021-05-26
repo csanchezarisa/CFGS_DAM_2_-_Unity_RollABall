@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427194, b: 0.5645252, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3667,6 +3667,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2334122, guid: e3a2b024936fe54498e16bf28bfd0e90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b81da1090bb3be14d97d22ff95eac980, type: 2}
     - target: {fileID: 5865449192624702252, guid: e3a2b024936fe54498e16bf28bfd0e90, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -6631,7 +6635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1795057342}
-  cameraPosition: {fileID: 919433366}
+  cameraPosition: {fileID: 0}
 --- !u!1001 &781980521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7812,7 +7816,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6c8cc2afdf3d02049b71a1f5abc7ab90, type: 2}
+  - {fileID: 2100000, guid: b81da1090bb3be14d97d22ff95eac980, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15322,7 +15326,7 @@ MonoBehaviour:
   desertRespawn: {fileID: 1695968486}
   riverRespawn: {fileID: 728168749}
   jungleRespawn: {fileID: 580299747}
-  rampRespawn: {fileID: 1418157772}
+  rampRespawn: {fileID: 0}
 --- !u!114 &1795057344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15344,7 +15348,7 @@ MonoBehaviour:
   desertPlatform: {fileID: 1689468827}
   riverPlatforms: {fileID: 2126429464}
   hallZone: {fileID: 1563212001}
-  rampZone: {fileID: 125335232}
+  rampZone: {fileID: 0}
 --- !u!82 &1795057345
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16552,6 +16556,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2372358, guid: 802bd3dc24c20394ca2037c1b9c882a0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b81da1090bb3be14d97d22ff95eac980, type: 2}
     m_RemovedComponents:
     - {fileID: 4441196528402173112, guid: 802bd3dc24c20394ca2037c1b9c882a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 802bd3dc24c20394ca2037c1b9c882a0, type: 3}
@@ -16947,7 +16955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6056f7ed6124f6a449c32e1bfdb2a75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {fileID: 919433366}
+  cameraPosition: {fileID: 0}
   player: {fileID: 1795057342}
   bulletSpeed: 40
   bulletPrefav: {fileID: 8857586451536393613, guid: 30149025f6060c54ab10c44ffb887d57, type: 3}
