@@ -6774,7 +6774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1795057342}
-  cameraPosition: {fileID: 0}
+  cameraPosition: {fileID: 919433366}
 --- !u!1001 &781980521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13426,7 +13426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1563212002
 Transform:
   m_ObjectHideFlags: 0
@@ -15657,7 +15657,7 @@ MonoBehaviour:
   desertPlatform: {fileID: 1689468827}
   riverPlatforms: {fileID: 2126429464}
   hallZone: {fileID: 1563212001}
-  rampZone: {fileID: 0}
+  rampZone: {fileID: 125335232}
 --- !u!82 &1795057345
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17264,7 +17264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6056f7ed6124f6a449c32e1bfdb2a75e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {fileID: 0}
+  cameraPosition: {fileID: 919433366}
   player: {fileID: 1795057342}
   bulletSpeed: 40
   bulletPrefav: {fileID: 8857586451536393613, guid: 30149025f6060c54ab10c44ffb887d57, type: 3}
