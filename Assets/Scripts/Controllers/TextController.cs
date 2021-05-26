@@ -18,6 +18,7 @@ public class TextController : MonoBehaviour
     public GameObject rampZone;
     public GameObject rampWall;
     public GameObject snowballController;
+    public GameObject finalZone;
 
     private int count;
     private AudioSource audioNewZone;
@@ -96,6 +97,23 @@ public class TextController : MonoBehaviour
 
             CheckCountTriggers();
         }
+        else if (other.gameObject.CompareTag("BigGoldCoins"))
+        {
+            // Reproduce el sonido de la moneda
+            AudioSource audioCoin = other.GetComponent<AudioSource>();
+            audioCoin.Play();
+
+            // Se oculta la moneda
+            Destroy(other.gameObject.GetComponent<MeshRenderer>());
+            Destroy(other.gameObject.GetComponent<BoxCollider>());
+            Destroy(other.gameObject, 1);
+
+            // Se suma en uno el contador de monedas recogidas
+            count += 30;
+            SetCountText();
+
+            CheckCountTriggers();
+        }
     }
 
     /** Se mata a un enemigo, se suman 10 puntos */
@@ -136,7 +154,7 @@ public class TextController : MonoBehaviour
         // Se han conseguido todas las monedas de la rampa
         else if (count == 220)
         {
-            audioNewZone.Play();
+            newZone(finalZone);
             Destroy(rampWall);
             Destroy(snowballController);
         }
