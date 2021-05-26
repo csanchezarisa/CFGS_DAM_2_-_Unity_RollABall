@@ -87,6 +87,7 @@ public class TextController : MonoBehaviour
 
             // Se oculta la moneda
             Destroy(other.gameObject.GetComponent<MeshRenderer>());
+            Destroy(other.gameObject.GetComponent<BoxCollider>());
             Destroy(other.gameObject, 1);
 
             // Se suma en uno el contador de monedas recogidas
