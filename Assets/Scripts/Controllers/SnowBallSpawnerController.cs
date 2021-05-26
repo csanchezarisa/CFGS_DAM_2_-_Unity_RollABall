@@ -9,7 +9,7 @@ public class SnowBallSpawnerController : MonoBehaviour
 
     private bool waiting = false;
 
-    void Update()
+    void FixedUpdate()
     {
         if (!waiting)
         {

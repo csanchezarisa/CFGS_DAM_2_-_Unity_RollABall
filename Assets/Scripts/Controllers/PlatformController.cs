@@ -14,7 +14,7 @@ public class PlatformController : MonoBehaviour
     private int nextPosition = 1;
     private bool moveToNext = true;
 
-    void Update()
+    void FixedUpdate()
     {
         MovePlatform();
     }

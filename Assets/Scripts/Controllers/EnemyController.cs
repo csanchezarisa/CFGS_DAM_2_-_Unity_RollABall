@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
         audioDie = audioSources[1];
     }
 
-    void LateUpdate()
+    void Update()
     {
         transform.LookAt(player);
 

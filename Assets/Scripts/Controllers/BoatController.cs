@@ -19,7 +19,7 @@ public class BoatController : MonoBehaviour
         boat = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         MovePlatform();
     }
