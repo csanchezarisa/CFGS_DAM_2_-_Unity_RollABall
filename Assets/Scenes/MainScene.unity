@@ -2144,6 +2144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ed164fbec4c3a4f9998d2f196bfdab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowballPrefab: {fileID: 3599767626582193917, guid: c10aaba8fd7c4ec4fa589db1b61ef3cd, type: 3}
 --- !u!1001 &196335292
 PrefabInstance:
   m_ObjectHideFlags: 0
