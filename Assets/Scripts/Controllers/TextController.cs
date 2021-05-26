@@ -16,6 +16,8 @@ public class TextController : MonoBehaviour
     public GameObject riverPlatforms;
     public GameObject hallZone;
     public GameObject rampZone;
+    public GameObject rampWall;
+    public GameObject snowballController;
 
     private int count;
     private AudioSource audioNewZone;
@@ -104,34 +106,38 @@ public class TextController : MonoBehaviour
         CheckCountTriggers();
     }
 
+    /** Activa una nueva zona y reproduce el sonido */
+    void newZone(GameObject zone)
+    {
+        audioNewZone.Play();
+        zone.SetActive(true);
+    }
+
     /** Ejecuta ciertas acciones cuando se llega a obtener un número determinado de puntos */
     void CheckCountTriggers()
     {
         // Se han conseguido todas las monedas del desierto
         if (count == 30)
-        {
-            audioNewZone.Play();
-            desertPlatform.SetActive(true);
-        }
+            newZone(desertPlatform);
 
         // Se han conseguido todas las monedas del rio
-        if (count == 55)
-        {
-            audioNewZone.Play();
-            riverPlatforms.SetActive(true);
-        }
+        else if (count == 55)
+            newZone(riverPlatforms);
 
         // Se activa la zona del pasillo
-        if (count == 95)
-        {
-            audioNewZone.Play();
-            hallZone.SetActive(true);
-        }
+        else if (count == 95)
+            newZone(hallZone);
 
         // Se han eliminado todos los monstruos
-        if (count == 185)
-        {
+        else if (count == 185)
+            newZone(rampZone);
 
+        // Se han conseguido todas las monedas de la rampa
+        else if (count == 215)
+        {
+            audioNewZone.Play();
+            Destroy(rampWall);
+            Destroy(snowballController);
         }
     }
 }
