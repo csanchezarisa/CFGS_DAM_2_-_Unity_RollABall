@@ -15658,8 +15658,8 @@ MonoBehaviour:
   riverPlatforms: {fileID: 2126429464}
   hallZone: {fileID: 1563212001}
   rampZone: {fileID: 125335232}
-  rampWall: {fileID: 0}
-  snowballController: {fileID: 0}
+  rampWall: {fileID: 1251551908}
+  snowballController: {fileID: 526270814}
 --- !u!82 &1795057345
 AudioSource:
   m_ObjectHideFlags: 0
