@@ -17,6 +17,7 @@ TagManager:
   - Enemy
   - Ground
   - EnemyBullet
+  - Snowball
   layers:
   - Default
   - TransparentFX

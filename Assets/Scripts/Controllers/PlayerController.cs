@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public Transform desertRespawn;
     public Transform riverRespawn;
     public Transform jungleRespawn;
+    public Transform rampRespawn;
 
     private Rigidbody rb;
     private AudioSource audioJump;
@@ -31,20 +32,25 @@ public class PlayerController : MonoBehaviour
         audioRolling = audioSources[3];
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Choca con la bola de nieve en la rampa
+        if (collision.gameObject.CompareTag("Snowball"))
+            respawn(rampRespawn);
+    }
+
     private void OnCollisionStay(Collision collision)
     {
+        // Se mantiene en una superfície etiquetada como Ground
         if (LayerMask.LayerToName(collision.gameObject.layer).Equals("Ground"))
-        {
             isGrounded = true;
-        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
+        // Cuando deja de colisionar con una superfície etiquetada como Ground
         if (LayerMask.LayerToName(collision.gameObject.layer).Equals("Ground"))
-        {
             isGrounded = false;
-        }
     }
 
     void Update()
@@ -77,34 +83,30 @@ public class PlayerController : MonoBehaviour
         audioJump.Play();
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
+
+    /** Suena el audio de hurt y cambia la posición el personaje */
+    void respawn(Transform respawnPosition)
+    {
+        audioHurt.Play();
+        transform.position = respawnPosition.position;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         // Se cae y toca el borde del tutorial. Vuelve al respawn del tutorial
         if (other.gameObject.CompareTag("TutorialBorder"))
-        {
-            audioHurt.Play();
-            transform.position = tutorialRespawn.position;
-        }
-
+            respawn(tutorialRespawn);
+        
         // Toca un cactus (enemigo del desierto) o se cae y toca el borde del Desierto. Vuelve al respawn del desierto
         else if (other.gameObject.CompareTag("DesertEnemy") || other.gameObject.CompareTag("DesertBorder"))
-        {
-            audioHurt.Play();
-            transform.position = desertRespawn.position;
-        }
+            respawn(desertRespawn);
 
         // Toca el rio o una bala de cañon o se cae y toca el borde del Rio. Vuelve al respawn del rio
         else if (other.gameObject.CompareTag("River") || other.gameObject.CompareTag("CanonBall"))
-        {
-            audioHurt.Play();
-            transform.position = riverRespawn.position;
-        }
+            respawn(riverRespawn);
 
         // Al tocar el lago o los bordes de la jungla. Vuelve al respawn de la jungla
         else if (other.gameObject.CompareTag("Lake") || other.gameObject.CompareTag("JungleBorder") || other.gameObject.CompareTag("EnemyBullet"))
-        {
-            audioHurt.Play();
-            transform.position = jungleRespawn.position;
-        }
+            respawn(jungleRespawn);
     }
 }
