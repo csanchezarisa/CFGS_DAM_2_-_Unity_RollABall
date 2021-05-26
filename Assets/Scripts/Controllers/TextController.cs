@@ -126,15 +126,15 @@ public class TextController : MonoBehaviour
             newZone(riverPlatforms);
 
         // Se activa la zona del pasillo
-        else if (count == 95)
+        else if (count == 100)
             newZone(hallZone);
 
         // Se han eliminado todos los monstruos
-        else if (count == 185)
+        else if (count == 190)
             newZone(rampZone);
 
         // Se han conseguido todas las monedas de la rampa
-        else if (count == 215)
+        else if (count == 220)
         {
             audioNewZone.Play();
             Destroy(rampWall);
