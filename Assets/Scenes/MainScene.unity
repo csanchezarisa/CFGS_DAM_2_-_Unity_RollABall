@@ -173,7 +173,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 309869530}
   - {fileID: 2122666146}
-  platformSpeed: 25
+  platformSpeed: 10
   waitTime: 3
 --- !u!1001 &2661211
 PrefabInstance:
@@ -5179,7 +5179,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 516551210}
   - {fileID: 1935831590}
-  platformSpeed: 25
+  platformSpeed: 10
   waitTime: 3
 --- !u!4 &590009751 stripped
 Transform:
@@ -5608,7 +5608,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 230596265}
   - {fileID: 1654353891}
-  platformSpeed: 10
+  platformSpeed: 5
   waitTime: 3
 --- !u!1 &652951077
 GameObject:
@@ -7046,7 +7046,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 945527612}
   - {fileID: 52880402}
-  platformSpeed: 20
+  platformSpeed: 7
   waitTime: 5
 --- !u!54 &848130753
 Rigidbody:
@@ -8133,7 +8133,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1664421557}
   - {fileID: 1237288113}
-  platformSpeed: 20
+  platformSpeed: 10
   waitTime: 3
 --- !u!1 &935325182
 GameObject:
@@ -11319,7 +11319,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 255374474}
   - {fileID: 1984878745}
-  platformSpeed: 20
+  platformSpeed: 15
   waitTime: 3
 --- !u!1 &1309705188
 GameObject:
@@ -13295,7 +13295,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1807659715}
   - {fileID: 1688187130}
-  platformSpeed: 15
+  platformSpeed: 7
   waitTime: 3
 --- !u!1001 &1532585503
 PrefabInstance:
@@ -13409,7 +13409,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1087625981}
   - {fileID: 1579304982}
-  platformSpeed: 10
+  platformSpeed: 5
   waitTime: 3
 --- !u!1 &1563212001
 GameObject:
@@ -13792,7 +13792,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 501384435}
   - {fileID: 63623354}
-  platformSpeed: 15
+  platformSpeed: 5
   waitTime: 3
 --- !u!1001 &1629908053
 PrefabInstance:
@@ -13928,7 +13928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648187395}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -252, y: -50.7, z: 0}
+  m_LocalPosition: {x: -252.00002, y: -50.7, z: 0}
   m_LocalScale: {x: 26.142685, y: 26.142685, z: 26.142685}
   m_Children: []
   m_Father: {fileID: 2126429465}
@@ -14353,7 +14353,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1144420766}
   - {fileID: 952581336}
-  platformSpeed: 15
+  platformSpeed: 5
   waitTime: 3
 --- !u!1 &1695968485
 GameObject:
@@ -17638,7 +17638,7 @@ MonoBehaviour:
   platformPositions:
   - {fileID: 1613616621}
   - {fileID: 428216090}
-  platformSpeed: 15
+  platformSpeed: 9
   waitTime: 3
 --- !u!1 &1935831589
 GameObject:
