@@ -15757,7 +15757,7 @@ MonoBehaviour:
   rampZone: {fileID: 125335232}
   rampWall: {fileID: 1251551908}
   snowballController: {fileID: 526270814}
-  finalZone: {fileID: 0}
+  finalZone: {fileID: 1271824246}
 --- !u!82 &1795057345
 AudioSource:
   m_ObjectHideFlags: 0

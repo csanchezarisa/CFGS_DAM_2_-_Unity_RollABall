@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class TextController : MonoBehaviour
@@ -37,16 +38,12 @@ public class TextController : MonoBehaviour
         tutorialMoveText.SetActive(true);
         tutorialJumpText.SetActive(false);
         tutorialShootText.SetActive(false);
+        SceneManager.LoadScene("CreditsScene", LoadSceneMode.Single);
     }
 
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-
-        //if (count >= 1)
-        //{
-        //    winText.SetActive(true);
-        //}
     }
 
     private void OnTriggerEnter(Collider other)
