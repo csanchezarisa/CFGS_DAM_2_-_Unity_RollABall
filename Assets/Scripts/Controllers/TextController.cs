@@ -38,7 +38,6 @@ public class TextController : MonoBehaviour
         tutorialMoveText.SetActive(true);
         tutorialJumpText.SetActive(false);
         tutorialShootText.SetActive(false);
-        SceneManager.LoadScene("CreditsScene", LoadSceneMode.Single);
     }
 
     void SetCountText()
@@ -155,5 +154,18 @@ public class TextController : MonoBehaviour
             Destroy(rampWall);
             Destroy(snowballController);
         }
+
+        // Se han conseguido todas las monedas que hay en el juego
+        else if (count == 250)
+        {
+            winText.SetActive(true);
+            StartCoroutine(WaitToCredits(3));
+        }
+    }
+
+    IEnumerator WaitToCredits(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene("CreditsScene", LoadSceneMode.Single);
     }
 }
