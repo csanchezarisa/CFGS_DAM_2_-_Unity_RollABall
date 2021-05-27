@@ -10934,7 +10934,7 @@ GameObject:
   - component: {fileID: 1271824250}
   - component: {fileID: 1271824249}
   - component: {fileID: 1271824248}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18999,6 +18999,10 @@ PrefabInstance:
     - target: {fileID: 1045410748215331086, guid: bff1015a4d179624dbe7bd0d5bcc1730, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050734375920793974, guid: bff1015a4d179624dbe7bd0d5bcc1730, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1050734375920793974, guid: bff1015a4d179624dbe7bd0d5bcc1730, type: 3}
       propertyPath: m_TagString
