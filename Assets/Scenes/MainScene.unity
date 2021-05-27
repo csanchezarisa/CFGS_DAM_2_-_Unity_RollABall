@@ -6967,6 +6967,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1820717123}
     m_Modifications:
+    - target: {fileID: 6514867289423271292, guid: 366587b712401294e95e11c4dba25309, type: 3}
+      propertyPath: platformPositions.Array.data[0]
+      value: 
+      objectReference: {fileID: 806934869}
+    - target: {fileID: 6514867289423271292, guid: 366587b712401294e95e11c4dba25309, type: 3}
+      propertyPath: platformPositions.Array.data[1]
+      value: 
+      objectReference: {fileID: 806934870}
     - target: {fileID: 6514867289423271294, guid: 366587b712401294e95e11c4dba25309, type: 3}
       propertyPath: m_Name
       value: ColonialShipController
@@ -7019,8 +7027,22 @@ PrefabInstance:
       propertyPath: right
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6519076149288936592, guid: 366587b712401294e95e11c4dba25309, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -145.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 366587b712401294e95e11c4dba25309, type: 3}
+--- !u!4 &806934869 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6514867288898272756, guid: 366587b712401294e95e11c4dba25309, type: 3}
+  m_PrefabInstance: {fileID: 806934868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &806934870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6514867289015806956, guid: 366587b712401294e95e11c4dba25309, type: 3}
+  m_PrefabInstance: {fileID: 806934868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &818472228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6514867289423271295, guid: 366587b712401294e95e11c4dba25309, type: 3}
