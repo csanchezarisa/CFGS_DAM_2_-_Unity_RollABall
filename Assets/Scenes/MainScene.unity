@@ -15758,7 +15758,7 @@ MonoBehaviour:
   desertRespawn: {fileID: 1695968486}
   riverRespawn: {fileID: 728168749}
   jungleRespawn: {fileID: 580299747}
-  rampRespawn: {fileID: 0}
+  rampRespawn: {fileID: 1418157772}
 --- !u!114 &1795057344
 MonoBehaviour:
   m_ObjectHideFlags: 0
